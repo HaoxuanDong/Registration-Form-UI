@@ -1,0 +1,117 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #fef6f2; */
+    background-color:#F4F7F8 ;
+    margin: 0;
+    padding: 2rem;
+}
+
+.signup-form {
+    background-color: #f5fafc;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.signup-form h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+legend .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #007a33;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+label {
+    display: block;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 600;
+}
+
+input, select,textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    /* background-color: #f0f7f9; */
+    background-color: #E8EEEF;
+    font-size: 1rem;
+}
+
+input:focus, select:focus {
+    border-color: #0077cc;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,119,204,0.2);
+}
+
+button {
+    background-color: #0077cc;
+    color: white;
+    padding: 0.75rem;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, button:focus {
+    background-color: #005fa3;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+ 
+}
+
+.radio-group label {
+  display: flex;
+  /* align-items: center; */
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.radio-group input {
+  margin-right: 0.3rem;
+}
+
+#gender{
+    font-weight: 600;
+}
+
