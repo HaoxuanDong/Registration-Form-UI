@@ -23,17 +23,20 @@
 
         <label for="last-name">Last Name:</label>
         <input type="text" id="last-name" name="last-name">
+        <!-- <label for="username">Username:</label>
+        <input type="text" id="username" name="username"> -->
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" 
             placeholder="xxxxxx@domain.com">
-        
-            
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
+        <section id="loginKey">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="email" id="confirmPassword" name="confirmPassword" required>
+        </section>
+        
     </fieldset>
 
     <!-- Other Details -->
@@ -63,7 +66,7 @@
             <option>Data Analytics</option>
             <option>UI/UX Design</option>
         </select>
-        <label for="message">Message</label>
+        <label for="message:">Message</label>
         <textarea name="message" id="message"></textarea>
     </fieldset>
 
