@@ -114,4 +114,7 @@ button:hover, button:focus {
 #gender{
     font-weight: 600;
 }
-
+#passwordError{
+    color: red;
+    font-size: 12px;
+}
