@@ -32,10 +32,10 @@
         <div id="loginKey">
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
-
+            <span id="passwordMessage"></span>
             <label for="confirmPassword">Confirm Password:</label>
             <input type="password" id="confirmPassword" name="confirmPassword" required>
-            <span id="passwordError"></span>
+            <span id="confirmMessage"></span>
         </div>
 
         
@@ -74,27 +74,44 @@
 
     <button type="submit">Sign Up</button>
 </form>
+
+</body>
 <script>
-    var password= document.getElementById("password");
-    var confirmPassword= document.getElementById("confirmPassword");
-    var passwordError= document.getElementById("passwordError");
-    function checkKey(){
-        if(confirmPassword.value.length > 0){
-            if(password.value === confirmPassword.value){
-                passwordError.textContent = "";
-                confirmPassword.style.borderColor = "green";
-            }else{
-                passwordError.textContent = "Passwords do not match";
-                confirmPassword.style.borderColor= "red";
-            }
-        }else{
-            passwordError.textContent="";
-            confirmPassword.style.borderColor="";
+    var password = document.getElementById("password");
+    var confirmPassword = document.getElementById("confirmPassword");
+    var passwordMessage = document.getElementById("passwordMessage");
+    var confirmMessage = document.getElementById("confirmMessage");
+    password.addEventListener("input", checkPasswordLength);
+    confirmPassword.addEventListener("input", checkPasswordMatch);
+    function checkPasswordMatch() {
+        if (confirmPassword.value === "") {
+            confirmMessage.textContent = "";
+            return;
+        }
+        if (password.value === confirmPassword.value) {
+            confirmMessage.textContent = "";
+            confirmMessage.style.color = "green";
+        } else {
+            confirmMessage.textContent = "passwords do not match";
+            confirmMessage.style.color = "red";
         }
     }
-    password.addEventListener("input", checkKey);
-    confirmPassword.addEventListener("input", checkKey);
+    // 监听密码输入
+    function checkPasswordLength() {
+        if (password.value.length < 8) {
+            passwordMessage.textContent = "at least 8 characters";
+            passwordMessage.style.color = "red";
+        } else {
+            passwordMessage.textContent = "good";
+            passwordMessage.style.color = "green";
+        }
 
-</script>
-</body>
+        // 检查两次密码是否一致
+        checkPasswordMatch();
+    }
+    password.addEventListener("input", checkPasswordLength);
+    confirmPassword.addEventListener("input", checkPasswordMatch);
+
+    
+</script>>
 </html>
